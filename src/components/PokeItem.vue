@@ -27,6 +27,7 @@ const checkPokemonName = () => {
     const correctName = props.pokemon.name.toLowerCase();
     if (userInput.value.toLowerCase() === correctName) {
         emit('discover', props.pokemon.name);
+        userInput.value = '';
     } else {
         alert('Nombre incorrecto, intenta de nuevo.');
     }
