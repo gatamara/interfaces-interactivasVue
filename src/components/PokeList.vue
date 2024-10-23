@@ -19,7 +19,7 @@ const correctNames = ref(new Set());
 onMounted(async () => {
     try {
         const requests = [];
-        for (let i = 1; i <= 150; i++) {
+        for (let i = 1; i <= 20; i++) {
             requests.push(axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`));
         }
         const responses = await Promise.all(requests);
